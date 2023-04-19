@@ -1,4 +1,5 @@
 ﻿using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -15,8 +16,8 @@ public class Login : MonoBehaviour
     public Button signupButton;
 
     // Поля вводу даних
-    public InputField emailInput;
-    public InputField passwordInput;
+    public TMP_InputField emailInput;
+    public TMP_InputField passwordInput;
 
     // Панелі
     public GameObject signupPanel;
@@ -28,6 +29,7 @@ public class Login : MonoBehaviour
         {
             email = emailInput.text;
             password = passwordInput.text;
+            Debug.Log(email + " " + password);
 
             // Валідація даних
             DataValidate();

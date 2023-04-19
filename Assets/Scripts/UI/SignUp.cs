@@ -1,4 +1,5 @@
 ﻿using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -17,10 +18,10 @@ public class SignUp : MonoBehaviour
     public Button signupButton;
 
     // Поля вводу даних
-    public InputField usernameInput;
-    public InputField emailInput;
-    public InputField passwordInput;
-    public InputField repeatPasswordInput;
+    public TMP_InputField usernameInput;
+    public TMP_InputField emailInput;
+    public TMP_InputField passwordInput;
+    public TMP_InputField repeatPasswordInput;
 
 
     public void Init()
