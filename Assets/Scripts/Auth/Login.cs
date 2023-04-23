@@ -15,10 +15,6 @@ public class Login : MonoBehaviour
     public TMP_InputField emailInput;
     public TMP_InputField passwordInput;
 
-    // Панелі
-    public GameObject signupPanel;
-    public GameObject loginPanel;
-
     public void Init()
     {
         try
@@ -52,17 +48,5 @@ public class Login : MonoBehaviour
         {
             throw new Exception("Incorrect email");
         }
-    }
-
-    public void MoveToSignupPanel()
-    {
-        loginPanel.SetActive(false);
-        signupPanel.SetActive(true);
-    }
-
-    public void MoveToLoginPanel()
-    {
-        loginPanel.SetActive(true);
-        signupPanel.SetActive(false);
     }
 }
