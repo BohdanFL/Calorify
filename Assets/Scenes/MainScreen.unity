@@ -341,9 +341,9 @@ RectTransform:
   m_Father: {fileID: 1725499448}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -95}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &103477533
@@ -688,9 +688,9 @@ RectTransform:
   m_Father: {fileID: 1685246435}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -95}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &140058422
@@ -1384,6 +1384,7 @@ MonoBehaviour:
   - {fileID: 1112289109}
   - {fileID: 959707050}
   - {fileID: 2112549488}
+  authPanels: []
   welcomePanel: {fileID: 0}
   signupPanel: {fileID: 0}
   loginPanel: {fileID: 0}
@@ -1401,7 +1402,6 @@ GameObject:
   - component: {fileID: 286340493}
   - component: {fileID: 286340495}
   - component: {fileID: 286340494}
-  - component: {fileID: 286340496}
   m_Layer: 5
   m_Name: Article (1)
   m_TagString: Untagged
@@ -1469,35 +1469,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 286340492}
   m_CullTransparentMesh: 1
---- !u!114 &286340496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 286340492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1112289113}
-          m_TargetAssemblyTypeName: Advice, Assembly-CSharp
-          m_MethodName: OpenURL
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: https://santamaria.com.ua/about/blog/yak-pokrashiti-yakist-snu
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &301505418
 GameObject:
   m_ObjectHideFlags: 0
@@ -2105,9 +2076,9 @@ RectTransform:
   m_Father: {fileID: 1519246187}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -25}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &372781691
@@ -3328,9 +3299,9 @@ RectTransform:
   m_Father: {fileID: 2059766269}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -165}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &679303235
@@ -4264,9 +4235,9 @@ RectTransform:
   m_Father: {fileID: 1685246435}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -25}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &858754177
@@ -4401,9 +4372,9 @@ RectTransform:
   m_Father: {fileID: 907243176}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 540, y: -1625}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1080, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &890285498
@@ -4539,6 +4510,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ChangeProgressBarValue, Assembly-CSharp
+        m_MethodName: AddCalories
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 200
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &896814654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4612,9 +4595,9 @@ RectTransform:
   m_Father: {fileID: 907243176}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 540, y: -1265}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1080, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &904864456
@@ -5172,9 +5155,9 @@ RectTransform:
   m_Father: {fileID: 1519246187}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -165}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1005252421
@@ -5307,9 +5290,9 @@ RectTransform:
   m_Father: {fileID: 1685246435}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -165}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1010554196
@@ -5711,6 +5694,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bf197cd47c7ba54583a80a067846c8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1141804776
 GameObject:
   m_ObjectHideFlags: 0
@@ -5821,9 +5807,9 @@ RectTransform:
   m_Father: {fileID: 2059766269}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -95}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1164510820
@@ -5958,9 +5944,9 @@ RectTransform:
   m_Father: {fileID: 907243176}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 540, y: -545}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1080, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1180767778
@@ -6148,7 +6134,6 @@ GameObject:
   - component: {fileID: 1208672864}
   - component: {fileID: 1208672867}
   - component: {fileID: 1208672866}
-  - component: {fileID: 1208672865}
   m_Layer: 5
   m_Name: Article (2)
   m_TagString: Untagged
@@ -6178,35 +6163,6 @@ RectTransform:
   m_AnchoredPosition: {x: 1219, y: -285}
   m_SizeDelta: {x: 470, y: 570}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1208672865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1208672863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1112289113}
-          m_TargetAssemblyTypeName: Advice, Assembly-CSharp
-          m_MethodName: OpenURL
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: https://life.pravda.com.ua/health/2019/02/10/235516/
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!114 &1208672866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6513,7 +6469,6 @@ GameObject:
   - component: {fileID: 1244771356}
   - component: {fileID: 1244771358}
   - component: {fileID: 1244771357}
-  - component: {fileID: 1244771359}
   m_Layer: 5
   m_Name: Article
   m_TagString: Untagged
@@ -6581,35 +6536,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1244771355}
   m_CullTransparentMesh: 1
---- !u!114 &1244771359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1244771355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1112289113}
-          m_TargetAssemblyTypeName: Advice, Assembly-CSharp
-          m_MethodName: OpenURL
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: https://life.pravda.com.ua/health/2019/02/10/235516/
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &1250459768
 GameObject:
   m_ObjectHideFlags: 0
@@ -6643,9 +6569,9 @@ RectTransform:
   m_Father: {fileID: 2059766269}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -25}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1250459770
@@ -7114,7 +7040,6 @@ GameObject:
   - component: {fileID: 1346172082}
   - component: {fileID: 1346172084}
   - component: {fileID: 1346172083}
-  - component: {fileID: 1346172085}
   m_Layer: 5
   m_Name: Article
   m_TagString: Untagged
@@ -7182,35 +7107,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1346172081}
   m_CullTransparentMesh: 1
---- !u!114 &1346172085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1346172081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1112289113}
-          m_TargetAssemblyTypeName: Advice, Assembly-CSharp
-          m_MethodName: OpenURL
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: https://www.unian.ua/health/worldnews/naykorisnishi-produkti-dlya-zhinochogo-zdorov-ya-ostanni-novini-11197046.html
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &1385452932
 GameObject:
   m_ObjectHideFlags: 0
@@ -8196,7 +8092,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1608549540}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 14a85131e21896b4a8e9cf912414bcb5, type: 3}
   m_Name: 
@@ -8458,9 +8354,9 @@ RectTransform:
   m_Father: {fileID: 594133535}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -95}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1688444008
@@ -8710,7 +8606,6 @@ GameObject:
   - component: {fileID: 1729395177}
   - component: {fileID: 1729395179}
   - component: {fileID: 1729395178}
-  - component: {fileID: 1729395180}
   m_Layer: 5
   m_Name: Article (1)
   m_TagString: Untagged
@@ -8778,35 +8673,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1729395176}
   m_CullTransparentMesh: 1
---- !u!114 &1729395180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1729395176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1112289113}
-          m_TargetAssemblyTypeName: Advice, Assembly-CSharp
-          m_MethodName: OpenURL
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: https://harchi.info/articles/yaki-produkty-pryskoryuyut-metabolizm
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &1733807297
 GameObject:
   m_ObjectHideFlags: 0
@@ -8886,7 +8752,6 @@ GameObject:
   - component: {fileID: 1744409280}
   - component: {fileID: 1744409282}
   - component: {fileID: 1744409281}
-  - component: {fileID: 1744409283}
   m_Layer: 5
   m_Name: Article
   m_TagString: Untagged
@@ -8954,35 +8819,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1744409279}
   m_CullTransparentMesh: 1
---- !u!114 &1744409283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1744409279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1112289113}
-          m_TargetAssemblyTypeName: Advice, Assembly-CSharp
-          m_MethodName: OpenURL
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: https://alexus.com.ua/produkti-dlya-zhinochogo-zdorovya-pravila-zdorovogo-xarchuvannya/
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &1790311945
 GameObject:
   m_ObjectHideFlags: 0
@@ -9154,9 +8990,9 @@ RectTransform:
   m_Father: {fileID: 907243176}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 540, y: -905}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1080, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1799850427
@@ -9208,7 +9044,6 @@ GameObject:
   - component: {fileID: 1810125980}
   - component: {fileID: 1810125983}
   - component: {fileID: 1810125982}
-  - component: {fileID: 1810125981}
   m_Layer: 5
   m_Name: Article (2)
   m_TagString: Untagged
@@ -9238,35 +9073,6 @@ RectTransform:
   m_AnchoredPosition: {x: 1219, y: -285}
   m_SizeDelta: {x: 470, y: 570}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1810125981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1810125979}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1112289113}
-          m_TargetAssemblyTypeName: Advice, Assembly-CSharp
-          m_MethodName: OpenURL
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: https://alexus.com.ua/produkti-dlya-zhinochogo-zdorovya-pravila-zdorovogo-xarchuvannya/
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!114 &1810125982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9338,9 +9144,9 @@ RectTransform:
   m_Father: {fileID: 594133535}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -25}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1810813898
@@ -9524,7 +9330,6 @@ GameObject:
   - component: {fileID: 1835990275}
   - component: {fileID: 1835990277}
   - component: {fileID: 1835990276}
-  - component: {fileID: 1835990278}
   m_Layer: 5
   m_Name: Article (1)
   m_TagString: Untagged
@@ -9592,35 +9397,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1835990274}
   m_CullTransparentMesh: 1
---- !u!114 &1835990278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1835990274}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1112289113}
-          m_TargetAssemblyTypeName: Advice, Assembly-CSharp
-          m_MethodName: OpenURL
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: https://vikna.tv/styl-zhyttya/zdorovia-ta-krasa/yak-nabraty-vagu-shvydko-ta-bezpechno-dlya-zdorovya-porady-diyetologa/
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &1840651179
 GameObject:
   m_ObjectHideFlags: 0
@@ -9654,9 +9430,9 @@ RectTransform:
   m_Father: {fileID: 1519246187}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -95}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1840651181
@@ -9926,9 +9702,9 @@ RectTransform:
   m_Father: {fileID: 907243176}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 540, y: -185}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1080, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1874726233
@@ -10002,9 +9778,9 @@ RectTransform:
   m_Father: {fileID: 594133535}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -165}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1927514519
@@ -10115,7 +9891,6 @@ GameObject:
   - component: {fileID: 1934368563}
   - component: {fileID: 1934368566}
   - component: {fileID: 1934368565}
-  - component: {fileID: 1934368564}
   m_Layer: 5
   m_Name: Article (2)
   m_TagString: Untagged
@@ -10145,35 +9920,6 @@ RectTransform:
   m_AnchoredPosition: {x: 1219, y: -285}
   m_SizeDelta: {x: 470, y: 570}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1934368564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1934368562}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1112289113}
-          m_TargetAssemblyTypeName: Advice, Assembly-CSharp
-          m_MethodName: OpenURL
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: https://www.unian.ua/health/worldnews/naykorisnishi-produkti-dlya-zhinochogo-zdorov-ya-ostanni-novini-11197046.html
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!114 &1934368565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10303,7 +10049,6 @@ GameObject:
   - component: {fileID: 1951404492}
   - component: {fileID: 1951404495}
   - component: {fileID: 1951404494}
-  - component: {fileID: 1951404493}
   m_Layer: 5
   m_Name: Article (3)
   m_TagString: Untagged
@@ -10333,35 +10078,6 @@ RectTransform:
   m_AnchoredPosition: {x: 1711, y: -285}
   m_SizeDelta: {x: 470, y: 570}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1951404493
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1951404491}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1112289113}
-          m_TargetAssemblyTypeName: Advice, Assembly-CSharp
-          m_MethodName: OpenURL
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: https://santamaria.com.ua/about/blog/yak-pokrashiti-yakist-snu
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!114 &1951404494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10654,7 +10370,6 @@ GameObject:
   - component: {fileID: 1974661883}
   - component: {fileID: 1974661886}
   - component: {fileID: 1974661885}
-  - component: {fileID: 1974661884}
   m_Layer: 5
   m_Name: Article (3)
   m_TagString: Untagged
@@ -10684,35 +10399,6 @@ RectTransform:
   m_AnchoredPosition: {x: 1711, y: -285}
   m_SizeDelta: {x: 470, y: 570}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1974661884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1974661882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1112289113}
-          m_TargetAssemblyTypeName: Advice, Assembly-CSharp
-          m_MethodName: OpenURL
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: https://vikna.tv/styl-zhyttya/zdorovia-ta-krasa/yak-nabraty-vagu-shvydko-ta-bezpechno-dlya-zdorovya-porady-diyetologa/
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!114 &1974661885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10762,7 +10448,6 @@ GameObject:
   - component: {fileID: 2014572799}
   - component: {fileID: 2014572802}
   - component: {fileID: 2014572801}
-  - component: {fileID: 2014572800}
   m_Layer: 5
   m_Name: Article (3)
   m_TagString: Untagged
@@ -10792,35 +10477,6 @@ RectTransform:
   m_AnchoredPosition: {x: 1711, y: -285}
   m_SizeDelta: {x: 470, y: 570}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2014572800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2014572798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1112289113}
-          m_TargetAssemblyTypeName: Advice, Assembly-CSharp
-          m_MethodName: OpenURL
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: https://harchi.info/articles/yaki-produkty-pryskoryuyut-metabolizm
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!114 &2014572801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10892,9 +10548,9 @@ RectTransform:
   m_Father: {fileID: 1725499448}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -165}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2026111243
@@ -11439,9 +11095,9 @@ RectTransform:
   m_Father: {fileID: 1725499448}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -25}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2128933407

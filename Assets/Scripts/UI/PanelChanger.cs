@@ -27,15 +27,24 @@ public class PanelChanger : MonoBehaviour
             if(index != i)
             {
                 mainPanels[i].SetActive(false);
-            } else
+            } else if (index == 2)
+            {
+                mainPanels[i].SetActive(!mainPanels[i].activeSelf);
+                mainPanels[0].SetActive(!mainPanels[0].activeSelf);
+            }
+            else 
             {
                 mainPanels[i].SetActive(true);
             }
         }
-        if (index == 0)
+        Debug.Log("Index: " + index);
+
+        if (index == 0 || index == 2)
         {
             profileButton.gameObject.SetActive(true);
-        } else {
+        }
+        else
+        {
             profileButton.gameObject.SetActive(false);
         }
     }

@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Windows;
 
 
 public class Login : MonoBehaviour
@@ -48,5 +49,20 @@ public class Login : MonoBehaviour
         {
             throw new Exception("Incorrect email");
         }
+    }
+
+    public void ShowPassword(TMP_InputField input)
+    {
+        if (input.contentType == TMP_InputField.ContentType.Password)
+        {
+            input.contentType = TMP_InputField.ContentType.Standard;
+        }
+        else if (input.contentType == TMP_InputField.ContentType.Standard)
+        {
+            input.contentType = TMP_InputField.ContentType.Password;
+        }
+        input.Select();
+
+        Debug.Log(input.inputType);
     }
 }

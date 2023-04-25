@@ -85,6 +85,12 @@ public class SignUp : MonoBehaviour
                 }
                 break;
             case 7:
+                usernameInput.text = "";
+                emailInput.text = "";
+                passwordInput.text = "";
+                weightInput.text = "";
+                heightInput.text = "";
+
                 Debug.Log("Username: " + username);
                 Debug.Log("Email: " + email);
                 Debug.Log("Password: " + password);
@@ -118,3 +124,4 @@ public class SignUp : MonoBehaviour
 }
 
 // Tips: Перевіряти данні у сеттерах.
+// Виводити помилки у інтерфейс
