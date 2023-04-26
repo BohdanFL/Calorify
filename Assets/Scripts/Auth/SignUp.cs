@@ -1,5 +1,6 @@
 ﻿using System;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -7,18 +8,9 @@ using static PanelChanger;
 
 public class SignUp : MonoBehaviour
 {
+    private User user = new User();
 
-    // Дані користувача
-    private string username;
-    private string email;
-    private string password;
-    private int goal = 2;
-    private int activity = 1;
-    private short height;
-    private short weight;
-
-
-    //// Поля вводу даних
+    // Поля вводу даних
     public TMP_InputField usernameInput;
     public TMP_InputField emailInput;
     public TMP_InputField passwordInput;
@@ -27,61 +19,73 @@ public class SignUp : MonoBehaviour
 
     public void GetUserDataFromPanel()
     {
-
-        username = usernameInput.text;
-        email = emailInput.text;
-        password = passwordInput.text;
-
-        if (!string.IsNullOrEmpty(heightInput.text))
-        {
-            height = Convert.ToInt16(heightInput.text);
-        }
-        else height = 0;
-
-        if (!string.IsNullOrEmpty(weightInput.text))
-        {
-            weight = Convert.ToInt16(weightInput.text);
-        }
-        else weight = 0;
-
-
         switch (currentAuthPanelIndex)
         {
             case 1:
-                // sign up panel
-                if (email.Length == 0 || password.Length == 0)
+                try
                 {
-                    throw new Exception("Not all fields are filled");
-                }
-                else if (!email.Contains("@gmail.com") || !(email.Length > 10))
+                    if (emailInput.text.Length == 0 || passwordInput.text.Length == 0)
+                    {
+                        throw new Exception("Not all fields are filled");
+                    }
+
+                    user.SetEmail(emailInput.text);
+                    user.SetPassword(passwordInput.text);
+                } catch (Exception e)
                 {
-                    throw new Exception("Incorrect email");
-                }
-                else if (!(password.Length > 6))
-                {
-                    throw new Exception("Password must be longer than 6 characters");
+                    throw e;
                 }
 
+                // sign up panel
                 break;
             case 4:
                 // name panel
-                if (username.Length == 0)
+                try
                 {
-                    throw new Exception("Username field empty!");
+                    if (usernameInput.text.Length == 0)
+                    {
+                        throw new Exception("Username field empty!");
+                    }
+                    user.SetUsername(usernameInput.text);
+                }
+                catch (Exception e)
+                {
+                    throw e;
                 }
                 break;
             case 5:
                 // height panel
-                if (height <= 0)
+                try
                 {
-                    throw new Exception("Height must be greater than 0!");
+                    if (!string.IsNullOrEmpty(heightInput.text))
+                    {
+                        user.SetHeight(Convert.ToInt16(heightInput.text));
+                    }
+                    else {
+                        throw new Exception("String is null or empty");
+                    };
+                }
+                catch (Exception e)
+                {
+                    throw e;
                 }
                 break;
             case 6:
                 // weight panel
-                if (weight <= 0)
+                try
                 {
-                    throw new Exception("Weight must be greater than 0!");
+                    if (!string.IsNullOrEmpty(weightInput.text))
+                    {
+                        user.SetWeight(Convert.ToInt16(weightInput.text));
+                    }
+                    else
+                    {
+                        throw new Exception("String is null or empty");
+                    };
+                }
+                catch (Exception e)
+                {
+                    throw e;
                 }
                 break;
             case 7:
@@ -91,37 +95,28 @@ public class SignUp : MonoBehaviour
                 weightInput.text = "";
                 heightInput.text = "";
 
-                Debug.Log("Username: " + username);
-                Debug.Log("Email: " + email);
-                Debug.Log("Password: " + password);
-                Debug.Log("Weight: " + weight);
-                Debug.Log("Height: " + height);
-                Debug.Log("Goal: " + goal);
-                Debug.Log("Activity: " + activity);
-
-
-                break;
-            default:
-                    //throw new Exception("Panels don't exist");
+                Debug.Log("Username: " + user.GetUsername());
+                Debug.Log("Email: " + user.GetEmail());
+                Debug.Log("Password: " + user.GetPassword());
+                Debug.Log("Weight: " + user.GetWeight());
+                Debug.Log("Height: " + user.GetHeight());
+                Debug.Log("Goal: " + user.GetGoal());
+                Debug.Log("Activity: " + user.GetActivity());
                 break;
         }
     }
 
-    public void SetGoal(int option)
+    // дропнути сеттери signup і використовувати user setters ???
+    public void SetGoal(short option)
     {
-        if (option >= 0 && option < 3)
-        {
-            goal = option;
-        }
+        user.SetGoal(option);
     }
-    public void SetActivity(int option)
+
+    public void SetActivity(short option)
     {
-        if (option >= 0 && option < 3)
-        {
-            activity = option;
-        }
+        user.SetGoal(option);
     }
 }
 
-// Tips: Перевіряти данні у сеттерах.
+// Todo: 
 // Виводити помилки у інтерфейс

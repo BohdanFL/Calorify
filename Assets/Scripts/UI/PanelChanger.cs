@@ -19,25 +19,41 @@ public class PanelChanger : MonoBehaviour
     public Button profileButton;
     public Button nextButton;
     public Button previousButton;
+    public Sprite openProfileSprite;
+    public Sprite closeProfileSprite;
 
     public void LoadPanelByIndex(int index)
     {
         for(int i = 0; i < mainPanels.Length; i++)
         {
-            if(index != i)
+            if (index != i)
             {
                 mainPanels[i].SetActive(false);
-            } else if (index == 2)
-            {
-                mainPanels[i].SetActive(!mainPanels[i].activeSelf);
-                mainPanels[0].SetActive(!mainPanels[0].activeSelf);
             }
-            else 
+            else if (index == 2) { 
+                break; 
+            }
+            else
             {
                 mainPanels[i].SetActive(true);
             }
         }
         Debug.Log("Index: " + index);
+
+        if (index == 2)
+        {
+            mainPanels[2].SetActive(!mainPanels[2].activeSelf);
+            mainPanels[0].SetActive(!mainPanels[0].activeSelf);
+
+            if (profileButton.image.sprite == closeProfileSprite)
+            {
+                profileButton.image.sprite = openProfileSprite;
+            }
+            else
+            {
+                profileButton.image.sprite = closeProfileSprite;
+            }
+        }
 
         if (index == 0 || index == 2)
         {
@@ -47,6 +63,7 @@ public class PanelChanger : MonoBehaviour
         {
             profileButton.gameObject.SetActive(false);
         }
+
     }
 
     public void ToAuthPanel(GameObject authPanel)
@@ -80,7 +97,7 @@ public class PanelChanger : MonoBehaviour
 
     public void ToNextPanel()
     {
-        authPanels[currentAuthPanelIndex - 1].SetActive(false);
+        authPanels[currentAuthPanelIndex].SetActive(false);
         currentAuthPanelIndex++;
         if (currentAuthPanelIndex == authPanels.Length)
         {

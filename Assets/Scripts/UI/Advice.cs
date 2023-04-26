@@ -5,29 +5,29 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 
-public class Advice : MonoBehaviour, IPointerClickHandler 
+public class Advice : MonoBehaviour 
 {
     //public string[] urls;
     //public GameObject[] panels;
-    public UnityEvent myEvent;
+    //public UnityEvent myEvent;
 
-    public void Start()
+    //public void Start()
+    //{
+    //}
+
+
+    //public void OnPointerClick(PointerEventData eventData)
+    //{
+    //    Debug.Log(eventData);
+    //}
+
+    public void OpenUrl(string url)
     {
-    }
-
-
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        Debug.Log(eventData);
-    }
-
-    public void OpenUrl()
-    {
-        //if (url.Contains("https://") || url.Contains("http://"))
-        //{
-        //    Application.OpenURL(url);
-        //    Debug.Log(url);
-        //}
+        if (url.Contains("https://") || url.Contains("http://"))
+        {
+            Application.OpenURL(url);
+            Debug.Log(url);
+        }
         Debug.Log("Do Stuff");
     }
 

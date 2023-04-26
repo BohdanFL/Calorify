@@ -38,7 +38,6 @@ public class Login : MonoBehaviour
         }
     }
 
-
     public void DataValidate()
     {
         if (email.Length == 0 || password.Length == 0)
