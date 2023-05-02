@@ -10,7 +10,7 @@ public class DBWorking : MonoBehaviour
     void Start()
     {
         CreateDB();
-        RegisterUser("Madx", "Max", "14081408", 62, 182, "Yea", "Nope");
+        ClearTable();
         ShowAll();
     }
 
@@ -62,6 +62,21 @@ public class DBWorking : MonoBehaviour
                     }
                 }
             }
+        }
+    }
+
+    void ClearTable()
+    {
+        using (var connection = new SqliteConnection(dbName))
+        {
+            connection.Open();
+            using (var command = connection.CreateCommand())
+            {
+                command.CommandText = "DELETE FROM User;";
+                command.Parameters.AddWithValue("@Name", name);
+                command.ExecuteNonQuery();
+            }
+            connection.Close();
         }
     }
 
