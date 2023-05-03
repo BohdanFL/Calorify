@@ -12,9 +12,9 @@ public class PanelChanger : MonoBehaviour
     public GameObject[] authPanels;
     static public int currentAuthPanelIndex = 0;
 
-    public GameObject welcomePanel;
     public GameObject signupPanel;
     public GameObject loginPanel;
+    public GameObject menuPanel;
 
     public Button profileButton;
     public Button nextButton;
@@ -44,31 +44,26 @@ public class PanelChanger : MonoBehaviour
         {
             mainPanels[2].SetActive(!mainPanels[2].activeSelf);
             mainPanels[0].SetActive(!mainPanels[0].activeSelf);
+            menuPanel.SetActive(!menuPanel.activeSelf);
 
-            if (profileButton.image.sprite == closeProfileSprite)
-            {
-                profileButton.image.sprite = openProfileSprite;
-            }
-            else
-            {
-                profileButton.image.sprite = closeProfileSprite;
-            }
+            profileButton.image.sprite = profileButton.image.sprite == closeProfileSprite ? openProfileSprite : closeProfileSprite;
         }
 
-        if (index == 0 || index == 2)
-        {
-            profileButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            profileButton.gameObject.SetActive(false);
-        }
-
+        //if (index == 0 || index == 2)
+        //{
+        //    profileButton.gameObject.SetActive(true);
+        //}
+        //else
+        //{
+        //    profileButton.gameObject.SetActive(false);
+        //}
+        profileButton.gameObject.SetActive(index == 0 || index == 2);
     }
 
     public void ToAuthPanel(GameObject authPanel)
     {
-        welcomePanel.SetActive(false);
+
+        authPanels[0].SetActive(false); // Welcome panel
         authPanel.SetActive(true);
         previousButton.gameObject.SetActive(true);
 

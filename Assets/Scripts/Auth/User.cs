@@ -20,25 +20,15 @@ enum ActivityType
 public class User
 {
     // Дані користувача
-    private string username;
-    private string email;
-    private string password;
-    private short goal;
-    private short activity;
-    private short height;
-    private short weight;
+    static private string username = "";
+    static private string email = "";
+    static private string password = "";
+    static private short goal = (short)GoalType.KeepFit;
+    static private short activity = (short)ActivityType.Regular;
+    static private float height = 0;
+    static private float weight = 0;
 
-    public User()
-    {
-        username = "";
-        email = "";
-        goal = (short)GoalType.KeepFit;
-        activity = (short)ActivityType.Regular;
-        height = 0;
-        weight = 0;
-    }
-
-    public User(string _username, string _email, string _password, short _goal, short _activity, short _height, short _weight)
+    static public void SetAll(string _username, string _email, string _password, short _goal, short _activity, float _height, float _weight)
     {
         SetUsername(_username);
         SetEmail(_email);
@@ -49,14 +39,14 @@ public class User
         SetWeight(_weight);
     }
 
-    public void SetUsername(string _username) {
+    static public void SetUsername(string _username) {
         if (_username.Length > 0)
         {
             username = _username;
         }
     }
 
-    public void SetEmail(string _email) {
+    static public void SetEmail(string _email) {
         if (_email.Length == 0) { 
             throw new Exception("Email is empty");
         }
@@ -67,7 +57,7 @@ public class User
         email = _email;
     }
 
-    public void SetPassword(string _password) {
+    static public void SetPassword(string _password) {
         if (_password.Length == 0)
         {
             throw new Exception("Email is empty");
@@ -81,7 +71,7 @@ public class User
         // додати шкалу оцінки паролю
     }
 
-    public void SetGoal(short _goal) {
+    static public void SetGoal(short _goal) {
         if (_goal < 0 && _goal >= Enum.GetNames(typeof(GoalType)).Length)
         {
             throw new Exception("GoalType doesn't exist");
@@ -89,38 +79,45 @@ public class User
         goal = _goal;
     }
 
-    public void SetActivity(short _activity) {
+    static public void SetActivity(short _activity) {
         if (_activity < 0 && _activity >= Enum.GetNames(typeof(ActivityType)).Length)
         {
-            throw new Exception("GoalType doesn't exist");
+            throw new Exception("ActivityType doesn't exist");
         }
         activity = _activity;
     }
 
-    public void SetHeight(short _height) {
+    static public void SetHeight(float _height) {
         if (_height <= 0)
         {
             throw new Exception("Height must be greater than 0!");
+        } else if (_height > 300)
+        {
+            throw new Exception("Height must be less than 300!");
         }
         height = _height;
     }
 
-    public void SetWeight(short _weight) {
+    static public void SetWeight(float _weight) {
         if (_weight <= 0)
         {
             throw new Exception("Weight must be greater than 0!");
+        }
+        else if (_weight > 700)
+        {
+            throw new Exception("Weight must be less than 700!");
         }
         weight = _weight;
     }
 
 
-    public string GetUsername() { return username; }
-    public string GetEmail() { return email; }
-    public string GetPassword() { return password; }
-    public short GetGoal() { return goal; }
-    public short GetActivity() { return activity; }
-    public short GetHeight() { return height; }
-    public short GetWeight() { return weight; }
+    static public string GetUsername() { return username; }
+    static public string GetEmail() { return email; }
+    static public string GetPassword() { return password; }
+    static public short GetGoal() { return goal; }
+    static public short GetActivity() { return activity; }
+    static public float GetHeight() { return height; }
+    static public float GetWeight() { return weight; }
 }
-// Tips: Перевіряти данні у сеттерах.
+
 // Виводити помилки у інтерфейс

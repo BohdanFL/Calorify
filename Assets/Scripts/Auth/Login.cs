@@ -2,8 +2,6 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using UnityEngine.Windows;
 
 
 public class Login : MonoBehaviour
@@ -15,6 +13,7 @@ public class Login : MonoBehaviour
     // Поля вводу даних
     public TMP_InputField emailInput;
     public TMP_InputField passwordInput;
+    public TMP_Text ErrorOutput;
 
     public void Init()
     {
@@ -26,15 +25,22 @@ public class Login : MonoBehaviour
             // Валідація даних
             DataValidate();
 
+            // Авторизація в базі даних
+            DBWorking.LoginUser(email, password);
+
             emailInput.text = "";
             passwordInput.text = "";
 
-            Debug.Log("Successfully!");
+            if (ErrorOutput.text.Length != 0)
+            {
+                ErrorOutput.text = "";
+            }
+
             SceneManager.LoadScene("MainScreen");
         }
         catch (Exception e)
         {
-            Debug.Log(e);
+            ErrorOutput.text = e.Message;
         }
     }
 
@@ -61,7 +67,5 @@ public class Login : MonoBehaviour
             input.contentType = TMP_InputField.ContentType.Password;
         }
         input.Select();
-
-        Debug.Log(input.inputType);
     }
 }
