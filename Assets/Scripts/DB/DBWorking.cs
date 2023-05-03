@@ -10,7 +10,8 @@ public class DBWorking : MonoBehaviour
     void Start()
     {
         CreateDB();
-        ClearTable();
+        RegisterUser("Max", "989m66@gmail.com", "lalalala", 62, 182, "growth", "small");
+        LoginUser("989m66@gmail.com", "lalalala");
         ShowAll();
     }
 
@@ -36,12 +37,49 @@ public class DBWorking : MonoBehaviour
             connection.Open();
             using(var command = connection.CreateCommand())
             {
-                command.CommandText = "INSERT INTO User (Name) VALUES (@Name);";
+                command.CommandText = "INSERT INTO User (Name, Email, Password, Mass, Height, Goal, ActivityLevel) VALUES (@Name, @Email, @Password, @Mass, @Height, @Goal, @ActivityLevel);";
                 command.Parameters.AddWithValue("@Name", name);
+                command.Parameters.AddWithValue("@Email", email);
+                command.Parameters.AddWithValue("@Password", password);
+                command.Parameters.AddWithValue("@Mass", mass);
+                command.Parameters.AddWithValue("@Height", height);
+                command.Parameters.AddWithValue("@Goal", goal);
+                command.Parameters.AddWithValue("@ActivityLevel", activityLevel);
                 command.ExecuteNonQuery();
             }
             connection.Close();
         }
+    }
+
+    public bool LoginUser(string email, string password)
+    {
+        string nameToCheck = ""; // string used to check if there're records by email and login
+
+        using (var connection = new SqliteConnection(dbName))
+        {
+            connection.Open();
+
+            using (var command = connection.CreateCommand())
+            {
+                command.CommandText = "SELECT * FROM User WHERE Email = @Email AND Password = @Password;";
+                command.Parameters.AddWithValue("@Email", email); 
+                command.Parameters.AddWithValue("@Password", password);
+
+                using (IDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        nameToCheck = (string)reader["Name"];
+                    }
+                }
+            }
+        }
+        if(nameToCheck.Length > 0)
+        {
+            return true;
+        }
+
+        return false;
     }
 
     // Only for development
@@ -73,7 +111,6 @@ public class DBWorking : MonoBehaviour
             using (var command = connection.CreateCommand())
             {
                 command.CommandText = "DELETE FROM User;";
-                command.Parameters.AddWithValue("@Name", name);
                 command.ExecuteNonQuery();
             }
             connection.Close();
