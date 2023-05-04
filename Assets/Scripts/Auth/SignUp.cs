@@ -28,11 +28,6 @@ public class SignUp : MonoBehaviour
                 // sign up panel
                 try
                 {
-                    if (emailInput.text.Length == 0 || passwordInput.text.Length == 0)
-                    {
-                        throw new Exception("Not all fields are filled");
-                    }
-
                     User.SetEmail(emailInput.text);
                     User.SetPassword(passwordInput.text);
 
@@ -51,10 +46,6 @@ public class SignUp : MonoBehaviour
                 // name panel
                 try
                 {
-                    if (usernameInput.text.Length == 0)
-                    {
-                        throw new Exception("Username field empty!");
-                    }
                     User.SetUsername(usernameInput.text);
 
                     if (ErrorOutput.text.Length != 0)
@@ -72,14 +63,7 @@ public class SignUp : MonoBehaviour
                 // height panel
                 try
                 {
-                    if (!string.IsNullOrEmpty(heightInput.text))
-                    {
-                        User.SetHeight(float.Parse(heightInput.text));
-                    }
-                    else {
-
-                        throw new Exception("String is null or empty");
-                    };
+                    User.SetHeight(heightInput.text);
 
                     if (ErrorOutput.text.Length != 0)
                     {
@@ -96,14 +80,7 @@ public class SignUp : MonoBehaviour
                 // weight panel
                 try
                 {
-                    if (!string.IsNullOrEmpty(weightInput.text))
-                    {
-                        User.SetWeight(float.Parse(weightInput.text));
-                    }
-                    else
-                    {
-                        throw new Exception("String is null or empty");
-                    };
+                    User.SetWeight(weightInput.text);
 
                     if (ErrorOutput.text.Length != 0)
                     {

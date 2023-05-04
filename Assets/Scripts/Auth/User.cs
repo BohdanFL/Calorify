@@ -40,15 +40,21 @@ public class User : MonoBehaviour
     }
 
     static public void SetUsername(string _username) {
-        if (_username.Length > 0)
+        if (username == _username) return;
+
+        Debug.Log(_username + "  Username:  " + username);
+        if (_username.Length == 0)
         {
-            username = _username;
+            throw new Exception("Username field empty");
         }
+        username = _username;
     }
 
     static public void SetEmail(string _email) {
+        if (email == _email) return;
+
         if (_email.Length == 0) { 
-            throw new Exception("Email is empty");
+            throw new Exception("Email field empty");
         }
         if (!_email.Contains("@gmail.com") || !(_email.Length > 10))
         {
@@ -58,9 +64,11 @@ public class User : MonoBehaviour
     }
 
     static public void SetPassword(string _password) {
+        if (password == _password) return;
+
         if (_password.Length == 0)
         {
-            throw new Exception("Email is empty");
+            throw new Exception("Password field empty");
         }
         if (!(_password.Length > 6))
         {
@@ -72,6 +80,7 @@ public class User : MonoBehaviour
     }
 
     static public void SetGoal(short _goal) {
+        if (goal == _goal) return;
         if (_goal < 0 && _goal >= Enum.GetNames(typeof(GoalType)).Length)
         {
             throw new Exception("GoalType doesn't exist");
@@ -80,6 +89,7 @@ public class User : MonoBehaviour
     }
 
     static public void SetActivity(short _activity) {
+        if (activity == _activity) return;
         if (_activity < 0 && _activity >= Enum.GetNames(typeof(ActivityType)).Length)
         {
             throw new Exception("ActivityType doesn't exist");
@@ -88,6 +98,7 @@ public class User : MonoBehaviour
     }
 
     static public void SetHeight(float _height) {
+        if (height == _height) return;
         if (_height <= 0)
         {
             throw new Exception("Height must be greater than 0!");
@@ -98,7 +109,18 @@ public class User : MonoBehaviour
         height = _height;
     }
 
+    static public void SetHeight(string _height)
+    {
+        if (string.IsNullOrEmpty(_height))
+        {
+            throw new Exception("Height field empty");
+        }
+
+        SetHeight(float.Parse(_height));
+    }
+
     static public void SetWeight(float _weight) {
+        if (weight == _weight) return;
         if (_weight <= 0)
         {
             throw new Exception("Weight must be greater than 0!");
@@ -108,6 +130,16 @@ public class User : MonoBehaviour
             throw new Exception("Weight must be less than 700!");
         }
         weight = _weight;
+    }
+
+    static public void SetWeight(string _weight)
+    {
+        if (string.IsNullOrEmpty(_weight))
+        {
+            throw new Exception("Weight field empty");
+        }
+
+        SetWeight(float.Parse(_weight));
     }
 
 
