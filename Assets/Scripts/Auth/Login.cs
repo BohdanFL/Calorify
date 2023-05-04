@@ -41,6 +41,7 @@ public class Login : MonoBehaviour
         catch (Exception e)
         {
             ErrorOutput.text = e.Message;
+            throw e;
         }
     }
 

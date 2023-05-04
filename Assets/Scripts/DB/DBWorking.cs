@@ -13,7 +13,7 @@ public class DBWorking : MonoBehaviour
     {
         Debug.Log("Database started!");
         CreateDB();
-        User.SetAll("Max", "989m66@gmail.com", "lalalala", 0, 1, 82, 162);
+        //User.SetAll("Max", "989m66@gmail.com", "lalalala", 0, 1, 82, 162);
         //RegisterUser();
         ShowAll();
         //ClearTable();
@@ -59,6 +59,7 @@ public class DBWorking : MonoBehaviour
 
     static public void LoginUser(string email, string password)
     {
+        Debug.Log("Login User Started");
         using (var connection = new SqliteConnection(dbName))
         {
             connection.Open();
@@ -78,7 +79,7 @@ public class DBWorking : MonoBehaviour
                 }
             }
         }
-        if (User.GetUsername().Length == 0)
+        if (User.GetEmail().Length == 0)
         {
             throw new Exception("User not exist!");
         }

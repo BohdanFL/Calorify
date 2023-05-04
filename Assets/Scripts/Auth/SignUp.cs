@@ -123,7 +123,6 @@ public class SignUp : MonoBehaviour
                     ErrorOutput.text = "";
                 }
 
-                //Profile.Start();
                 break;
         }
     }
