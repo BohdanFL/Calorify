@@ -1,27 +1,24 @@
 ﻿using System;
 using TMPro;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 using static PanelChanger;
 
 public class SignUp : MonoBehaviour
 {
-    private User user = new User();
-
     // Поля вводу даних
     public TMP_InputField usernameInput;
     public TMP_InputField emailInput;
     public TMP_InputField passwordInput;
     public TMP_InputField heightInput;
     public TMP_InputField weightInput;
+    public TMP_Text ErrorOutput;
 
     public void GetUserDataFromPanel()
     {
         switch (currentAuthPanelIndex)
         {
             case 1:
+                // sign up panel
                 try
                 {
                     if (emailInput.text.Length == 0 || passwordInput.text.Length == 0)
@@ -29,14 +26,19 @@ public class SignUp : MonoBehaviour
                         throw new Exception("Not all fields are filled");
                     }
 
-                    user.SetEmail(emailInput.text);
-                    user.SetPassword(passwordInput.text);
+                    User.SetEmail(emailInput.text);
+                    User.SetPassword(passwordInput.text);
+
+                    if (ErrorOutput.text.Length != 0)
+                    {
+                        ErrorOutput.text = "";
+                    }
                 } catch (Exception e)
                 {
+                    ErrorOutput.text = e.Message;
                     throw e;
                 }
 
-                // sign up panel
                 break;
             case 4:
                 // name panel
@@ -46,10 +48,16 @@ public class SignUp : MonoBehaviour
                     {
                         throw new Exception("Username field empty!");
                     }
-                    user.SetUsername(usernameInput.text);
+                    User.SetUsername(usernameInput.text);
+
+                    if (ErrorOutput.text.Length != 0)
+                    {
+                        ErrorOutput.text = "";
+                    }
                 }
                 catch (Exception e)
                 {
+                    ErrorOutput.text = e.Message;
                     throw e;
                 }
                 break;
@@ -59,14 +67,21 @@ public class SignUp : MonoBehaviour
                 {
                     if (!string.IsNullOrEmpty(heightInput.text))
                     {
-                        user.SetHeight(Convert.ToInt16(heightInput.text));
+                        User.SetHeight(float.Parse(heightInput.text));
                     }
                     else {
+
                         throw new Exception("String is null or empty");
                     };
+
+                    if (ErrorOutput.text.Length != 0)
+                    {
+                        ErrorOutput.text = "";
+                    }
                 }
                 catch (Exception e)
                 {
+                    ErrorOutput.text = e.Message;
                     throw e;
                 }
                 break;
@@ -76,45 +91,50 @@ public class SignUp : MonoBehaviour
                 {
                     if (!string.IsNullOrEmpty(weightInput.text))
                     {
-                        user.SetWeight(Convert.ToInt16(weightInput.text));
+                        User.SetWeight(float.Parse(weightInput.text));
                     }
                     else
                     {
                         throw new Exception("String is null or empty");
                     };
+
+                    if (ErrorOutput.text.Length != 0)
+                    {
+                        ErrorOutput.text = "";
+                    }
                 }
                 catch (Exception e)
                 {
+                    ErrorOutput.text = e.Message;
                     throw e;
                 }
                 break;
             case 7:
+                DBWorking.RegisterUser();
+
                 usernameInput.text = "";
                 emailInput.text = "";
                 passwordInput.text = "";
                 weightInput.text = "";
                 heightInput.text = "";
 
-                Debug.Log("Username: " + user.GetUsername());
-                Debug.Log("Email: " + user.GetEmail());
-                Debug.Log("Password: " + user.GetPassword());
-                Debug.Log("Weight: " + user.GetWeight());
-                Debug.Log("Height: " + user.GetHeight());
-                Debug.Log("Goal: " + user.GetGoal());
-                Debug.Log("Activity: " + user.GetActivity());
+                if (ErrorOutput.text.Length != 0)
+                {
+                    ErrorOutput.text = "";
+                }
+
                 break;
         }
     }
 
-    // дропнути сеттери signup і використовувати user setters ???
     public void SetGoal(short option)
     {
-        user.SetGoal(option);
+        User.SetGoal(option);
     }
 
     public void SetActivity(short option)
     {
-        user.SetGoal(option);
+        User.SetGoal(option);
     }
 }
 
