@@ -13,6 +13,13 @@ public class SignUp : MonoBehaviour
     public TMP_InputField weightInput;
     public TMP_Text ErrorOutput;
 
+    void Start()
+    {
+        if (ErrorOutput.text.Length != 0)
+        {
+            ErrorOutput.text = "";
+        }
+    }
     public void GetUserDataFromPanel()
     {
         switch (currentAuthPanelIndex)

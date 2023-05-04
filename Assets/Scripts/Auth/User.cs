@@ -17,7 +17,7 @@ enum ActivityType
     Often
 }
 
-public class User
+public class User : MonoBehaviour
 {
     // Дані користувача
     static private string username = "";
@@ -119,5 +119,3 @@ public class User
     static public float GetHeight() { return height; }
     static public float GetWeight() { return weight; }
 }
-
-// Виводити помилки у інтерфейс

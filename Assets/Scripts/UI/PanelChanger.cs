@@ -38,7 +38,6 @@ public class PanelChanger : MonoBehaviour
                 mainPanels[i].SetActive(true);
             }
         }
-        Debug.Log("Index: " + index);
 
         if (index == 2)
         {
@@ -49,14 +48,6 @@ public class PanelChanger : MonoBehaviour
             profileButton.image.sprite = profileButton.image.sprite == closeProfileSprite ? openProfileSprite : closeProfileSprite;
         }
 
-        //if (index == 0 || index == 2)
-        //{
-        //    profileButton.gameObject.SetActive(true);
-        //}
-        //else
-        //{
-        //    profileButton.gameObject.SetActive(false);
-        //}
         profileButton.gameObject.SetActive(index == 0 || index == 2);
     }
 

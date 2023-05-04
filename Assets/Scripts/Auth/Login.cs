@@ -15,6 +15,13 @@ public class Login : MonoBehaviour
     public TMP_InputField passwordInput;
     public TMP_Text ErrorOutput;
 
+    void Start()
+    {
+        if (ErrorOutput.text.Length != 0)
+        {
+            ErrorOutput.text = "";
+        }
+    }
     public void Init()
     {
         try
