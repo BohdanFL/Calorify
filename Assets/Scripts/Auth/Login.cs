@@ -33,7 +33,7 @@ public class Login : MonoBehaviour
             DataValidate();
 
             // Авторизація в базі даних
-            DBWorking.LoginUser(email, password);
+            //DBWorking.LoginUser(email, password);
 
             emailInput.text = "";
             passwordInput.text = "";

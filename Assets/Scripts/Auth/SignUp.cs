@@ -94,7 +94,7 @@ public class SignUp : MonoBehaviour
                 }
                 break;
             case 7:
-                DBWorking.RegisterUser();
+                //DBWorking.RegisterUser();
 
                 usernameInput.text = "";
                 emailInput.text = "";
