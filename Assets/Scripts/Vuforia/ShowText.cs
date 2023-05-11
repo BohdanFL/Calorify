@@ -10,6 +10,7 @@ public class ShowText : MonoBehaviour
 
     public void ChangeText(string newText)
     {
+        Debug.Log("OK");
         panel.SetActive(true);
         text.text = newText;
     }
