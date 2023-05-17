@@ -11,12 +11,11 @@ public class DBWorking : MonoBehaviour
     static string dbName = "URI=file:Users.db";
     void Start()
     {
-        Debug.Log("Database started!");
         CreateDB();
         //User.SetAll("Max", "989m66@gmail.com", "lalalala", 0, 1, 82, 162);
         //RegisterUser();
         LoginUser("bohdan@gmail.com", "qwerty123");
-        ShowAll();
+        //ShowAll();
         //ClearTable();
     }
 
@@ -60,7 +59,6 @@ public class DBWorking : MonoBehaviour
 
     static public void LoginUser(string email, string password)
     {
-        Debug.Log("Login User Started");
         using (var connection = new SqliteConnection(dbName))
         {
             connection.Open();

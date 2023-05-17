@@ -1,5 +1,6 @@
 ﻿using System;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
@@ -25,8 +26,58 @@ public class User : MonoBehaviour
     static private string password = "";
     static private short goal = (short)GoalType.KeepFit;
     static private short activity = (short)ActivityType.Regular;
-    static private float height = 0;
-    static private float weight = 0;
+    static private float height = 182;
+    static private float weight = 62;
+
+    static private int caloriesNeeded = 0;
+    static private int caloriesEaten = 0;
+    static private int carbsNeeded = 0;
+    static private int carbsEaten = 0;
+    static private int fatsNeeded = 0;
+    static private int fatsEaten = 0;
+    static private int protsNeeded = 0;
+    static private int protsEaten = 0;
+
+    static public int CarbsNeeded
+    {
+        get { return carbsNeeded; }
+        set { carbsNeeded = value; }
+    }
+    static public int CarbsEaten
+    {
+        get { return carbsEaten; }
+        set { carbsEaten += value; }
+    }
+    static public int FatsNeeded
+    {
+        get { return fatsNeeded; }
+        set { fatsNeeded = value; }
+    }
+    static public int FatsEaten
+    {
+        get { return fatsEaten; }
+        set { fatsEaten += value; }
+    }
+    static public int ProtsNeeded
+    {
+        get { return protsNeeded; }
+        set { protsNeeded = value; }
+    }
+    static public int ProtsEaten
+    {
+        get { return protsEaten; }
+        set { protsEaten += value; }
+    }
+    static public int CaloriesNeeded
+    {
+        get { return caloriesNeeded; }
+        set { caloriesNeeded = value; }
+    }
+    static public int CaloriesEaten
+    {
+        get { return caloriesEaten; }
+        set { caloriesEaten += value; }
+    }
 
     static public void SetAll(string _username, string _email, string _password, short _goal, short _activity, float _height, float _weight)
     {
