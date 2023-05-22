@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShowPopUpInfo : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class ShowPopUpInfo : MonoBehaviour
     public TextMeshProUGUI carbs;
     public TextMeshProUGUI fats;
 
+    public Image caloriesScanProgressBar;
+    public TextMeshProUGUI caloriesScanPercent;
     public TMP_InputField inputMass;
 
     int calculatedCals, calculatedProts, calculatedFats, calculatedCarbs, mass;
@@ -46,5 +49,9 @@ public class ShowPopUpInfo : MonoBehaviour
     {
         ChangeProgressBarValue progressBar = new ChangeProgressBarValue();
         progressBar.AddProductData(calculatedCals, calculatedCarbs, calculatedFats, calculatedProts);
-     }
+
+        float percentage = (float)User.CaloriesEaten / (float)User.CaloriesNeeded;
+        caloriesScanProgressBar.fillAmount = percentage;
+        caloriesScanPercent.text = $"{Mathf.RoundToInt(percentage * 100f)}%";
+    }
 }
