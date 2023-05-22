@@ -22,6 +22,9 @@ public class PanelChanger : MonoBehaviour
     public Sprite openProfileSprite;
     public Sprite closeProfileSprite;
 
+    public TMP_Text ErrorOutput;
+
+
     public void LoadPanelByIndex(int index)
     {
         for(int i = 0; i < mainPanels.Length; i++)
@@ -47,11 +50,6 @@ public class PanelChanger : MonoBehaviour
 
             profileButton.image.sprite = profileButton.image.sprite == closeProfileSprite ? openProfileSprite : closeProfileSprite;
         }
-        //if (index == 4)
-        //{
-
-        //}
-
 
         profileButton.gameObject.SetActive(index == 0 || index == 2);
     }
@@ -69,6 +67,7 @@ public class PanelChanger : MonoBehaviour
         }
 
         currentAuthPanelIndex++;
+
     }
 
     public void SwapAuthPanel()
@@ -84,6 +83,7 @@ public class PanelChanger : MonoBehaviour
         {
             nextButton.gameObject.SetActive(false);
         }
+
     }
 
     public void ToNextPanel()

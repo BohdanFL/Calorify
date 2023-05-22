@@ -24,7 +24,6 @@ public class ProfileUI : MonoBehaviour
         profileNameInput.onEndEdit.AddListener(UpdateUsername);
         profileHeightInput.onEndEdit.AddListener(UpdateHeight);
         profileWeightInput.onEndEdit.AddListener(UpdateWeight);
-
     }
 
 

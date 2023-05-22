@@ -51,7 +51,7 @@ public class DailyList : MonoBehaviour
 
         string nameStr = itemName.text;
         string caloriesStr = calories.text + " κκΰλ";
-        string masaStr = inputMasa.text.Length == 0 || Int16.Parse(inputMasa.text) > 0 ? "100 γ" : inputMasa.text + " γ";
+        string masaStr = inputMasa.text.Length == 0 || Int16.Parse(inputMasa.text) <= 0 ? "100 γ" : inputMasa.text + " γ";
 
         // Dish panel
         RectTransform dishTrans = dish.AddComponent<RectTransform>();
@@ -69,15 +69,7 @@ public class DailyList : MonoBehaviour
 
         Image foodImage = image.AddComponent<Image>();
         foodImage.sprite = foodImages[Int32.Parse(index.text)];
-        //foodImage.color = Color.black;
         image.transform.SetParent(dish.transform);
-
-        // Texting
-        //RectTransform textingTrans = texting.AddComponent<RectTransform>();
-        //textingTrans.transform.SetParent(dish.transform);
-        //textingTrans.sizeDelta = new Vector2(100, 100);
-        //textingTrans.localPosition = new Vector2(0f, 95f);
-        //texting.transform.SetParent(dish.transform);
 
         // Name
         RectTransform nameTrans = name.AddComponent<RectTransform>();
@@ -128,18 +120,5 @@ public class DailyList : MonoBehaviour
         Image lineImage = line.AddComponent<Image>();
         lineImage.color = Color.black;
         line.transform.SetParent(dish.transform);
-
-        //GameObject imgObject = new GameObject("testAAA");
-
-        //RectTransform trans = imgObject.AddComponent<RectTransform>();
-        //trans.transform.SetParent(canvas.transform); // setting parent
-        //trans.localScale = Vector3.one;
-        //trans.anchoredPosition = new Vector2(0f, 0f); // setting position, will be on center
-        //trans.sizeDelta = new Vector2(150, 200); // custom size
-
-        //Image image = imgObject.AddComponent<Image>();
-        //Texture2D tex = Resources.Load<Texture2D>("red");
-        //image.sprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
-        //imgObject.transform.SetParent(canvas.transform);
     }
 }
