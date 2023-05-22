@@ -31,8 +31,6 @@ public class ShowPopUpInfo : MonoBehaviour
             calculatedFats = (int)(item.Fats * (mass / 100));
             calculatedCarbs = (int)(item.Carbs * (mass / 100));
 
-            Debug.Log(calculatedCals);
-
             itemName.text = item.Name;
             calories.text = $"{calculatedCals.ToString()}";
             prots.text = $"{calculatedProts.ToString()}";
@@ -46,5 +44,5 @@ public class ShowPopUpInfo : MonoBehaviour
     {
         ChangeProgressBarValue progressBar = new ChangeProgressBarValue();
         progressBar.AddProductData(calculatedCals, calculatedCarbs, calculatedFats, calculatedProts);
-     }
+    }
 }

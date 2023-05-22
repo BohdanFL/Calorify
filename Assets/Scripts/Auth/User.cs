@@ -46,7 +46,7 @@ public class User : MonoBehaviour
     static public int CarbsEaten
     {
         get { return carbsEaten; }
-        set { carbsEaten += value; }
+        set { carbsEaten = value; }
     }
     static public int FatsNeeded
     {
@@ -56,7 +56,7 @@ public class User : MonoBehaviour
     static public int FatsEaten
     {
         get { return fatsEaten; }
-        set { fatsEaten += value; }
+        set { fatsEaten = value; }
     }
     static public int ProtsNeeded
     {
@@ -66,7 +66,7 @@ public class User : MonoBehaviour
     static public int ProtsEaten
     {
         get { return protsEaten; }
-        set { protsEaten += value; }
+        set { protsEaten = value; }
     }
     static public int CaloriesNeeded
     {
@@ -76,7 +76,7 @@ public class User : MonoBehaviour
     static public int CaloriesEaten
     {
         get { return caloriesEaten; }
-        set { caloriesEaten += value; }
+        set { caloriesEaten = value; }
     }
 
     static public void SetAll(string _username, string _email, string _password, short _goal, short _activity, float _height, float _weight)

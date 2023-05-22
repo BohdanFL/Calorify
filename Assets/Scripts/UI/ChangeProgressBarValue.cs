@@ -26,7 +26,6 @@ public class ChangeProgressBarValue : MonoBehaviour
         caloriesScanPercent.text = $"{Mathf.RoundToInt(percentage * 100f)}%";
         caloriesText.text = $"{User.CaloriesEaten}/{User.CaloriesNeeded} ккал.";
 
-
         protsProgressBar.fillAmount = (float)User.ProtsEaten / (float)User.ProtsNeeded;
         fatsProgressBar.fillAmount = (float) (User.FatsEaten / (float)User.FatsNeeded);
         carbsProgressBar.fillAmount = (float)(User.CarbsEaten / (float)User.CarbsNeeded);
