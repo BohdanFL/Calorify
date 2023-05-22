@@ -47,6 +47,11 @@ public class PanelChanger : MonoBehaviour
 
             profileButton.image.sprite = profileButton.image.sprite == closeProfileSprite ? openProfileSprite : closeProfileSprite;
         }
+        //if (index == 4)
+        //{
+
+        //}
+
 
         profileButton.gameObject.SetActive(index == 0 || index == 2);
     }

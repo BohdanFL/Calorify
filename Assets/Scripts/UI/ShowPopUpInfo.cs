@@ -9,7 +9,10 @@ public class ShowPopUpInfo : MonoBehaviour
     public TextMeshProUGUI index;
     public TextMeshProUGUI itemName;
     public TextMeshProUGUI calories;
-    public TextMeshProUGUI pfc;
+    public TextMeshProUGUI prots;
+    public TextMeshProUGUI carbs;
+    public TextMeshProUGUI fats;
+
     public TMP_InputField inputMass;
 
     int calculatedCals, calculatedProts, calculatedFats, calculatedCarbs, mass;
@@ -31,8 +34,11 @@ public class ShowPopUpInfo : MonoBehaviour
             Debug.Log(calculatedCals);
 
             itemName.text = item.Name;
-            calories.text = $"{calculatedCals.ToString()} ккал";
-            pfc.text = $"{calculatedProts.ToString()}, {calculatedFats.ToString()}, {calculatedCarbs.ToString()}";
+            calories.text = $"{calculatedCals.ToString()}";
+            prots.text = $"{calculatedProts.ToString()}";
+            carbs.text = $"{calculatedCarbs.ToString()}";
+            fats.text = $"{calculatedFats.ToString()}";
+
         }
     }
 
@@ -40,5 +46,5 @@ public class ShowPopUpInfo : MonoBehaviour
     {
         ChangeProgressBarValue progressBar = new ChangeProgressBarValue();
         progressBar.AddProductData(calculatedCals, calculatedCarbs, calculatedFats, calculatedProts);
-    }
+     }
 }

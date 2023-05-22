@@ -7,18 +7,25 @@ using UnityEngine.UI;
 public class ChangeProgressBarValue : MonoBehaviour
 {
     public Image caloriesProgressBar;
+    public Image caloriesScanProgressBar;
     public TextMeshProUGUI caloriesText;
+    public TextMeshProUGUI caloriesPercent;
+    public TextMeshProUGUI caloriesScanPercent;
     public Image protsProgressBar;
     public Image fatsProgressBar;
     public Image carbsProgressBar;
 
-    private void Update()
+    public void Update()
     {
         float percentage;
         percentage = (float)User.CaloriesEaten / (float)User.CaloriesNeeded;
 
         caloriesProgressBar.fillAmount = percentage;
-        caloriesText.text = $"{Mathf.RoundToInt(percentage * 100f)}%";
+        caloriesScanProgressBar.fillAmount = percentage;
+        caloriesPercent.text = $"{Mathf.RoundToInt(percentage * 100f)}%";
+        caloriesScanPercent.text = $"{Mathf.RoundToInt(percentage * 100f)}%";
+        caloriesText.text = $"{User.CaloriesEaten}/{User.CaloriesNeeded} ккал.";
+
 
         protsProgressBar.fillAmount = (float)User.ProtsEaten / (float)User.ProtsNeeded;
         fatsProgressBar.fillAmount = (float) (User.FatsEaten / (float)User.FatsNeeded);

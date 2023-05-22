@@ -31,7 +31,6 @@ public class DBWorking : MonoBehaviour
             }
             connection.Close();
         }
-
     }
 
     static public void RegisterUser()
@@ -49,7 +48,6 @@ public class DBWorking : MonoBehaviour
                 command.Parameters.AddWithValue("@Height", User.GetHeight());
                 command.Parameters.AddWithValue("@Goal", User.GetGoal());
                 command.Parameters.AddWithValue("@ActivityLevel", User.GetActivity());
-
                 command.ExecuteNonQuery();
             }
             connection.Close();
