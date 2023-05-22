@@ -118,7 +118,7 @@ public class SignUp : MonoBehaviour
 
     public void SetActivity(short option)
     {
-        User.SetGoal(option);
+        User.SetActivity(option);
     }
 }
 
