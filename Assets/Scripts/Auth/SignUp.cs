@@ -58,6 +58,7 @@ public class SignUp : MonoBehaviour
                     ErrorOutput.text = e.Message;
                     throw e;
                 }
+
                 break;
             case 5:
                 // height panel

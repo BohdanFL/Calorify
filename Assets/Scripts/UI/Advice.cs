@@ -40,3 +40,7 @@ public class Advice : MonoBehaviour
 // https://vikna.tv/styl-zhyttya/zdorovia-ta-krasa/yak-nabraty-vagu-shvydko-ta-bezpechno-dlya-zdorovya-porady-diyetologa/
 // https://life.pravda.com.ua/health/2019/02/10/235516/
 // https://santamaria.com.ua/about/blog/yak-pokrashiti-yakist-snu
+
+
+
+

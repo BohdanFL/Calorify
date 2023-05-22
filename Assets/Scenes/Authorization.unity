@@ -7540,6 +7540,7 @@ MonoBehaviour:
   previousButton: {fileID: 1877354709}
   openProfileSprite: {fileID: 0}
   closeProfileSprite: {fileID: 0}
+  ErrorOutput: {fileID: 540350887}
 --- !u!114 &1232421079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9094,7 +9095,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1581597918
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10824,7 +10825,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1823044749
 MonoBehaviour:
   m_ObjectHideFlags: 0

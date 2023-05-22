@@ -14,7 +14,7 @@ public class DBWorking : MonoBehaviour
         CreateDB();
         //User.SetAll("Max", "989m66@gmail.com", "lalalala", 0, 1, 82, 162);
         //RegisterUser();
-        LoginUser("bohdan@gmail.com", "qwerty123");
+        //LoginUser("bohdan@gmail.com", "qwerty123");
         //ShowAll();
         //ClearTable();
     }

@@ -21,13 +21,13 @@ enum ActivityType
 public class User : MonoBehaviour
 {
     // Дані користувача
-    static private string username = "";
-    static private string email = "";
-    static private string password = "";
+    static private string username;
+    static private string email;
+    static private string password;
     static private short goal = (short)GoalType.KeepFit;
     static private short activity = (short)ActivityType.Regular;
-    static private float height = 182;
-    static private float weight = 62;
+    static private float height = 0;
+    static private float weight = 0;
 
     static private int caloriesNeeded = 0;
     static private int caloriesEaten = 0;
@@ -91,9 +91,6 @@ public class User : MonoBehaviour
     }
 
     static public void SetUsername(string _username) {
-        if (username == _username) return;
-
-        Debug.Log(_username + "  Username:  " + username);
         if (_username.Length == 0)
         {
             throw new Exception("Username field empty");
@@ -102,8 +99,6 @@ public class User : MonoBehaviour
     }
 
     static public void SetEmail(string _email) {
-        if (email == _email) return;
-
         if (_email.Length == 0) { 
             throw new Exception("Email field empty");
         }
@@ -115,7 +110,6 @@ public class User : MonoBehaviour
     }
 
     static public void SetPassword(string _password) {
-        if (password == _password) return;
 
         if (_password.Length == 0)
         {
@@ -131,7 +125,6 @@ public class User : MonoBehaviour
     }
 
     static public void SetGoal(short _goal) {
-        if (goal == _goal) return;
         if (_goal < 0 && _goal >= Enum.GetNames(typeof(GoalType)).Length)
         {
             throw new Exception("GoalType doesn't exist");
@@ -140,7 +133,6 @@ public class User : MonoBehaviour
     }
 
     static public void SetActivity(short _activity) {
-        if (activity == _activity) return;
         if (_activity < 0 && _activity >= Enum.GetNames(typeof(ActivityType)).Length)
         {
             throw new Exception("ActivityType doesn't exist");
@@ -149,7 +141,6 @@ public class User : MonoBehaviour
     }
 
     static public void SetHeight(float _height) {
-        if (height == _height) return;
         if (_height <= 0)
         {
             throw new Exception("Height must be greater than 0!");
@@ -192,7 +183,6 @@ public class User : MonoBehaviour
 
         SetWeight(float.Parse(_weight));
     }
-
 
     static public string GetUsername() { return username; }
     static public string GetEmail() { return email; }

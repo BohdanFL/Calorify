@@ -97,6 +97,10 @@ public class PanelChanger : MonoBehaviour
             return;
         }
         authPanels[currentAuthPanelIndex].SetActive(true);
+        if (ErrorOutput.text.Length != 0)
+        {
+            ErrorOutput.text = "";
+        }
     }
 
     public void ToPreviousPanel()
@@ -113,6 +117,10 @@ public class PanelChanger : MonoBehaviour
         {
             nextButton.gameObject.SetActive(false);
             previousButton.gameObject.SetActive(false);
+        }
+        if (ErrorOutput.text.Length != 0)
+        {
+            ErrorOutput.text = "";
         }
     }
 }
