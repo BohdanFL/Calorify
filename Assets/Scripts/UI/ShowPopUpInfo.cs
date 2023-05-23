@@ -31,10 +31,10 @@ public class ShowPopUpInfo : MonoBehaviour
             if (inputMass.text.Length == 0) mass = 100;
             else mass = Int32.Parse(inputMass.text);
 
-            calculatedCals = (int)(item.Calories * (mass / 100));
-            calculatedProts = (int)(item.Prots * (mass / 100));
-            calculatedFats = (int)(item.Fats * (mass / 100));
-            calculatedCarbs = (int)(item.Carbs * (mass / 100));
+            calculatedCals = (int)(item.Calories * (mass / 100f));
+            calculatedProts = (int)(item.Prots * (mass / 100f));
+            calculatedFats = (int)(item.Fats * (mass / 100f));
+            calculatedCarbs = (int)(item.Carbs * (mass / 100f));
 
             itemName.text = item.Name;
             calories.text = $"{calculatedCals.ToString()}";
